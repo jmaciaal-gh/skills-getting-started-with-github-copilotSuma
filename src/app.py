@@ -52,6 +52,12 @@ def get_activities():
     return activities
 
 
+@app.get("/sum")
+def sum_numbers(a: float, b: float):
+    """Sum two numbers."""
+    return {"result": a + b}
+
+
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
     """Sign up a student for an activity"""
